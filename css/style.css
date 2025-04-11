@@ -1,3 +1,8 @@
+body {
+    font-family: fantasy;
+    background-color: aliceblue;
+}
+
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -37,8 +42,9 @@ main > section {
 }
 
 .section-content {
-
+    text-align: center;
 }
+
 
 footer {
     text-align: center;
