@@ -32,11 +32,15 @@
         <!-- Home Section -->
         <section id="home-section">
             <header>
-                <h2>Hi _, Welcome to my website</h2>
+                <h2>Hi_, Welcome to my website</h2>
             </header>
 
+            <button id="tombol">Ganti Nama</button>
+
             <!-- Banner Content* -->
-            <div class="banner-image"></div>
+            <div class="banner-img banner-1"></div>
+            <div class="banner-img banner-2"></div>
+            <div class="banner-img banner-3"></div>
 
             <!-- Banner Text -->
             <article class="section-content">
@@ -81,9 +85,21 @@
             </header>
 
             <!-- Message Us Form -->
-            <form></form>
+            <form>
+                <div>
+                    <label for="name">Name:</label>
+                    <!-- Inputan yang wajib di isi -->
+                    <input type="text" id="name" required>
+                </div>
+
+                <div>
+                    <button type="button" onclick="validateForm()">Submit</button>
+                </div>
+            </form>
         </section>
     </main>
+
+    <script src="js/script.js"></script>
 
     <hr>
     
@@ -91,5 +107,7 @@
     <footer>
         <span>Made by Fachri</span>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

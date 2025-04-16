@@ -12,7 +12,7 @@ body {
     border: 1px solid;
     height: 50px;
     width: 50px;
-    background-image: url(https://picsum.photos/id/237/200/300);
+    background-image: url(https://pbs.twimg.com/profile_images/806902967/17043_1184253694272_1466140112_30470920_4861900_n_400x400.jpg);
     background-size: contain;
     background-position: center;
     border-radius: 50%;
@@ -30,11 +30,22 @@ nav>a {
     padding: 8px;
 }
 
-.banner-image { 
+.banner-img { 
     height: 400px;
-    background-image: url(https://picsum.photos/id/237/200/300);
-    background-size: cover;
+    background-size: auto;
     background-position: center;
+}
+
+.banner-1 {
+    background-image: url(https://picsum.photos/500);
+}
+
+.banner-2 {
+    background-image: url(https://picsum.photos/550);
+}
+
+.banner-3 {
+    background-image: url(https://picsum.photos/600);
 }
 
 main > section {
@@ -48,4 +59,12 @@ main > section {
 
 footer {
     text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+    .main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
 }
