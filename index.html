@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fachri Company</title>
+    <title>Joki.Viest</title>
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
@@ -32,10 +32,8 @@
         <!-- Home Section -->
         <section id="home-section">
             <header>
-                <h2>Hi_, Welcome to my website</h2>
+                <h2>Hi <span id="username">_</span>, Welcome to Joki.Viest</h2>
             </header>
-
-            <button id="tombol">Ganti Nama</button>
 
             <!-- Banner Content* -->
             <div class="banner-img banner-1"></div>
@@ -58,7 +56,8 @@
 
             <!-- Our Profile Text -->
             <article class="section-content">
-                <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
+                <p>Kami adalah tim profesional Mobile Legends yang siap membantu Anda menaikkan tier tanpa ribet. Dengan pengalaman lebih dari 5 tahun, kami menjamin pelayanan aman, cepat, dan terpercaya.</p>
+                <img src="assets/joki.png" alt="Joki ML Team" width="600" height="600">
             </article>
         </section>
         
@@ -68,12 +67,27 @@
         <section id="portofolio-section">
             <header>
                 <h2>Portofolio</h2>
+                <p>Berikut beberapa hasil joki yang telah kami kerjakan:</p>
             </header>
 
             <!-- Portofolio Text -->
-            <article class="section-content">
-                <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
-            </article>
+            <div class="portfolio-grid">
+                <div class="card">
+                  <img src="assets/mythic.png" alt="Joki ke Mythic">
+                  <h3>Rank: Mythic</h3>
+                  <p>Waktu: 2 Hari</p>
+                </div>
+                <div class="card">
+                  <img src="assets/glory.jpg" alt="Joki ke Glory">
+                  <h3>Rank: Glory</h3>
+                  <p>Waktu: 3 Hari</p>
+                </div>
+                <div class="card">
+                  <img src="assets/legend.jpg" alt="Joki ke Legend">
+                  <h3>Rank: Legend</h3>
+                  <p>Waktu: 1 Hari</p>
+                </div>
+              </div>
         </section>
 
         <hr>
@@ -84,19 +98,44 @@
                 <h2>Message Us</h2>
             </header>
 
-            <!-- Message Us Form -->
-            <form>
-                <div>
-                    <label for="name">Name:</label>
-                    <!-- Inputan yang wajib di isi -->
-                    <input type="text" id="name" required>
+            <body>
+                <div class="container">
+                  <!-- Form Message Us -->
+                  <form id="messageForm">
+                    <h2>Message Us</h2>
+                    <div class="form-group">
+                      <label for="nama">Nama :</label>
+                      <input type="text" id="nama" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="tanggal">Tanggal Lahir :</label>
+                      <input type="date" id="tanggal" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Jenis Kelamin :</label>
+                      <div class="radio-group">
+                        <label><input type="radio" name="gender" value="Laki - Laki" required> Laki-Laki</label>
+                        <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="pesan">Pesan :</label>
+                      <textarea id="pesan" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                  </form>
+              
+                  <!-- Output Display -->
+                  <div class="result-box" id="outputBox">
+                    <p><strong>Current time :</strong> <span id="currentTime"></span></p>
+                    <p><strong>Nama :</strong> <span id="outputNama"></span></p>
+                    <p><strong>Tanggal Lahir :</strong> <span id="outputTanggal"></span></p>
+                    <p><strong>Jenis Kelamin :</strong> <span id="outputGender"></span></p>
+                    <p><strong>Pesan :</strong> <span id="outputPesan"></span></p>
+                  </div>
                 </div>
-
-                <div>
-                    <button type="button" onclick="validateForm()">Submit</button>
-                </div>
-            </form>
-        </section>
+              
+              </body>
     </main>
 
     <script src="js/script.js"></script>

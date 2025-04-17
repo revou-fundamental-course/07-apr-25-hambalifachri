@@ -10,6 +10,13 @@ function validateForm() {
     }
 }
 
+const userInput = prompt("Siapa nama kamu?");
+    
+    // Jika user mengisi dan tidak kosong
+    if (userInput && userInput.trim() !== "") {
+      document.getElementById("username").textContent = userInput;
+    }
+
 let indexBanner = 0;
 
 function nextBanner() {
@@ -39,3 +46,22 @@ showBanner();
 setInterval(() => {
     nextBanner();
 }, 3000);
+
+// Tampilkan waktu saat ini
+const now = new Date();
+document.getElementById("currentTime").textContent = now.toString();
+
+// Tangani form submit
+document.getElementById("messageForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nama = document.getElementById("nama").value;
+  const tanggal = document.getElementById("tanggal").value;
+  const pesan = document.getElementById("pesan").value;
+  const gender = document.querySelector('input[name="gender"]:checked').value;
+
+  document.getElementById("outputNama").textContent = nama;
+  document.getElementById("outputTanggal").textContent = tanggal;
+  document.getElementById("outputGender").textContent = gender;
+  document.getElementById("outputPesan").textContent = pesan;
+});
